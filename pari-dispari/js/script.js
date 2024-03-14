@@ -4,10 +4,13 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-
+alert('Sfida il computer a pari o dispari!')
 // chiedo all'utente di scegliere tra pari e dispari
-
+const userEvenOrOdd = prompt('Scegli tra pari e dispari!')
+console.log('user choice:', userEvenOrOdd);
 // chiedo all'utente di inseriire un numero tra 1 e 5
+const userNumber = parseInt(prompt('Scegli un numero tra 1 e 5'));
+console.log('user number:', userNumber);
 
 // genero un numero random tra 1 e 5 per il computer (funzione)
 
