@@ -17,14 +17,26 @@ const cpuNumber = getRndInteger(1, 5);
 console.log('cpu number:', cpuNumber);
 
 // sommo i due numeri
+let sum = userNumber + cpuNumber;
+console.log('sum:', sum);
 
 // stabilisco se la somma dei due numeri è pari o dispari (funzione)
+let userNumberEvenOrOdd = isEvenOrOdd(sum);
+console.log('even or odd:', userNumberEvenOrOdd);
 
 // dichiaro il vincitore
+let userMessage;
+if (userEvenOrOdd == userNumberEvenOrOdd) {
+    userMessage = 'Hai vinto!';
+} else {
+    userMessage = 'Hai perso!';
+}
+alert(userMessage);
+
 
 // #region FUNCTIONS
-// FUNCTIONS
 
+// 1
 // Ritorna un numero random tra il minimo e il massimo (inclusi)
 // min -> numero intero che rappresenta il numero minimo da cui partire per generare il numero random
 // max -> numero intero che rappresenta il numero massimo da cui partire per generare il numero random
@@ -33,7 +45,7 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
+// 2
 // verifica se un numero è pari o dispari
 // number -> numero intero che rappresenta il numero da verificare
 // return -> stringa 'even' se pari, altrimenti 'odd'
@@ -41,9 +53,9 @@ function getRndInteger(min, max) {
 function isEvenOrOdd(number) {
     let result;
     if (number % 2 === 0) {
-        result = 'even';
+        result = 'pari';
     } else {
-        result = 'odd';
+        result = 'dispari';
     }
     return result;
 }
